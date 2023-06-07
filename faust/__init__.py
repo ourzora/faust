@@ -29,7 +29,7 @@ else:
 
 from typing import Any, Mapping, NamedTuple, Optional, Sequence, Tuple
 
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 __author__ = "Robinhood Markets, Inc."
 __contact__ = "schrohm@gmail.com, vpatki@wayfair.com, williambbarnhart@gmail.com"
 __homepage__ = "https://github.com/faust-streaming/faust"

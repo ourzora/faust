@@ -714,6 +714,8 @@ class AIOKafkaConsumerThread(ConsumerThread):
             }
             self.tp_last_committed_at.update({tp: now for tp in aiokafka_offsets})
             await consumer.commit(aiokafka_offsets)
+        except ValueError as exc:
+            self.log.exception("Silent exceptions: Committing raised exception: %r", exc)
         except CommitFailedError as exc:
             if "already rebalanced" in str(exc):
                 return False
