@@ -715,7 +715,9 @@ class AIOKafkaConsumerThread(ConsumerThread):
             self.tp_last_committed_at.update({tp: now for tp in aiokafka_offsets})
             await consumer.commit(aiokafka_offsets)
         except ValueError as exc:
-            self.log.exception("Silent exceptions: Committing raised exception: %r", exc)
+            self.log.exception(
+                "Silent exceptions: Committing raised exception: %r", exc
+            )
         except CommitFailedError as exc:
             if "already rebalanced" in str(exc):
                 return False
@@ -1396,12 +1398,15 @@ class Producer(base.Producer):
         return await fut
 
     async def flush(self) -> None:
-        """Wait for producer to finish transmitting all buffered messages."""
-        await self.buffer.flush()
-        if self._producer is not None:
-            await self._producer.flush()
-        for transaction_producer in self._transaction_producers.values():
-            await transaction_producer.flush()
+        try:
+            """Wait for producer to finish transmitting all buffered messages."""
+            await self.buffer.flush()
+            if self._producer is not None:
+                await self._producer.flush()
+            for transaction_producer in self._transaction_producers.values():
+                await transaction_producer.flush()
+        except Exception as e:
+            logger.error(f"ERROR IN FAUST AIOKAFKA.PY FLUSH: {repr(e)}")
 
     def key_partition(self, topic: str, key: bytes) -> TP:
         """Hash key to determine partition destination."""
