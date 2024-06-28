@@ -27,7 +27,7 @@ We have decided to fork the original `Faust` project because there is a critical
 
 We want to:
 
-- Ensure continues release
+- Ensure Continuous release
 - Code quality
 - Use of latest versions of kafka drivers (for now only [aiokafka](https://github.com/aio-libs/aiokafka))
 - Support kafka transactions
