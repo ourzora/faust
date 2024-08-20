@@ -51,7 +51,7 @@ It is used at `Robinhood` to build high performance distributed systems
 and real-time data pipelines that process billions of events every day.
 
 Faust provides both *stream processing* and *event processing*,
-sharing similarity with tools such as `Kafka Streams`, `Apache Spark`, `Storm`, `Samza`, `Flink`,
+sharing similarity with tools such as `Kafka Streams`, `Apache Spark`, `Apache Storm`, `Apache Samza`, ` Apache Flink`,
 
 It does not use a DSL, it's just Python!
 This means you can use all your favorite Python libraries
@@ -174,9 +174,9 @@ resource for learning the implementation of `Kafka Streams`.
 - `Celery`: http://celeryproject.org
 - `Kafka Streams`: https://kafka.apache.org/documentation/streams
 - `Apache Spark`: http://spark.apache.org
-- `Storm`: http://storm.apache.org
-- `Samza`: http://samza.apache.org
-- `Flink`: http://flink.apache.org
+- `Apache Storm`: http://storm.apache.org
+- `Apache Samza`: http://samza.apache.org
+- `Apache Flink`: http://flink.apache.org
 - `RocksDB`: http://rocksdb.org
 - `Aerospike`: https://www.aerospike.com/
 - `Apache Kafka`: https://kafka.apache.org
