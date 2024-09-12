@@ -17,8 +17,8 @@
 
 ## Documentation
 
-- `introduction`: https://faust-streaming.github.io/faust/introduction.html
-- `quickstart`: https://faust-streaming.github.io/faust/playbooks/quickstart.html
+- `Introducing`: https://faust-streaming.github.io/faust/introduction.html
+- `Quick Start`: https://faust-streaming.github.io/faust/playbooks/quickstart.html
 - `User Guide`: https://faust-streaming.github.io/faust/userguide/index.html
 
 ## Why the fork
