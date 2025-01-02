@@ -8,7 +8,7 @@
 [![slack](https://img.shields.io/badge/slack-Faust-brightgreen.svg?logo=slack)](https://join.slack.com/t/fauststreaming/shared_invite/zt-1q1jhq4kh-Q1t~rJgpyuMQ6N38cByE9g)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![pre-commit](https://img.shields.io/badge/pre--commit-enabled-green)
-![license](https://img.shields.io/pypi/l/faust-streaming)
+[![license](https://img.shields.io/pypi/l/faust-streaming)](https://github.com/ourzora/faust/blob/master/LICENSE)
 ![downloads](https://img.shields.io/pypi/dw/faust-streaming)
 
 ## Installation
